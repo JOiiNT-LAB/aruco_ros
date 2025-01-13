@@ -21,34 +21,18 @@ Changelog for package aruco
 * forcing opencv3 build for kinetic
 * Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Victor Lopez
 
-5.0.5 (2024-05-09)
+3.1.4 (2023-09-21)
 ------------------
-
-5.0.4 (2023-11-14)
-------------------
-
-5.0.3 (2023-10-03)
-------------------
+* Merge branch 'smd/fix/correctFisheye' into 'gallium-devel'
+  Added correctFisheye parameter, not the default one (false)
+  See merge request ros-overlays/aruco_ros!14
 * Added correctFisheye parameter, not the default one (false)
-* Contributors: sergiomoyano
+* Contributors: Sai Kishor Kothakota, sergiomoyano
 
-5.0.2 (2023-03-20)
+3.1.3 (2022-11-23)
 ------------------
-
-5.0.1 (2023-03-06)
-------------------
-* remove compile options for warnings
-* Contributors: Noel Jimenez
-
-5.0.0 (2023-02-08)
-------------------
-* fixed cornerUpsample slicing bug issue
-* disable tests for package aruco
-* added missing ament exports in CMakeLists.txt
-* added ament_lint test to the packages aruco and aruco_msgs
-* added minor fix in aruco CMakeLists.txt
-* added the ament configuration to build with colcon
-* Contributors: Noel Jimenez, Sai Kishor Kothakota, josegarcia
+* Fix/109/ferrum/cornerupsample
+* Contributors: josegarcia
 
 3.1.2 (2022-11-10)
 ------------------

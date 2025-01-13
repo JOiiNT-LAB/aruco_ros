@@ -30,55 +30,11 @@ Changelog for package aruco_ros
 * Replace assert by error message to keep library functional
 * Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Jorge Nicho, Ugnius Malūkas, Victor Lopez, Voidminded
 
-5.0.5 (2024-05-09)
-------------------
-* Merge pull request #135 from wep21/jazzy-devel
-  Update cv_bridge header
-* check header exists
-* feat: update cv bridge header
-* Contributors: Sai Kishor Kothakota, wep21
-
-5.0.4 (2023-11-14)
-------------------
-* Add website tag
-* Contributors: Noel Jimenez
-
-5.0.3 (2023-10-03)
+3.1.4 (2023-09-21)
 ------------------
 
-5.0.2 (2023-03-20)
+3.1.3 (2022-11-23)
 ------------------
-* Merge branch 'fix_warnings' into 'humble-devel'
-  Fix warnings
-  See merge request ros-overlays/aruco_ros!11
-* rename variable to avoid shadowing
-* check marker_size greater than 0
-* return true at the end of setup
-* Contributors: Noel Jimenez, saikishor
-
-5.0.1 (2023-03-06)
-------------------
-
-5.0.0 (2023-02-08)
-------------------
-* ament uncrustify lint
-* create subnode to namespace the topics and changed default node names
-* declare params and fix launchers
-* disable copyright check
-* linters fixes
-* add tests
-* remove wrong copyright
-* params fix
-* port launchers to ros2
-* declare node parameters
-* migrate the aruco_ros double node to ROS2
-* added some fixes for the aruco_simple ros2 node
-* migrate the node aruco_simple to ROS2
-* refactor marker_publisher for the setup to work correctly
-* migrated the marker publish node to ROS2
-* migrated the aruco_ros_utils.cpp to ros2
-* added temporary changes of humble
-* Contributors: Noel Jimenez, Sai Kishor Kothakota
 
 3.1.2 (2022-11-10)
 ------------------

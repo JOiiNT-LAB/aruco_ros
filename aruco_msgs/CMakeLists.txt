@@ -1,26 +1,17 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 2.8.3)
 project(aruco_msgs)
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
+find_package(catkin REQUIRED COMPONENTS
+  message_generation
+  geometry_msgs
+  std_msgs)
 
-# find dependencies
-find_package(ament_cmake)
-find_package(std_msgs REQUIRED)
-find_package(geometry_msgs REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
+add_message_files( FILES Marker.msg MarkerArray.msg )
+generate_messages( DEPENDENCIES std_msgs geometry_msgs )
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Marker.msg"
-  "msg/MarkerArray.msg"
-  DEPENDENCIES std_msgs geometry_msgs
+catkin_package(
+  CATKIN_DEPENDS
+    message_runtime
+    geometry_msgs
+    std_msgs
 )
-
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
-endif()
-
-ament_export_dependencies(rosidl_default_runtime)
-ament_package()
