@@ -1,0 +1,15 @@
+<!-- Current image_pipeline and cv_bridge is not stable with opencv 3.0, image_proc not working for me
+ and tried of rolling back to opencv2.4, so test if it works for opencv 2.4 -->
+<launch>
+
+  <arg name="ns_image_proc"              			default=""/>
+
+  <arg name="image_topic" 			default="left_robot_cam" />
+  <arg name="camera_info_topic" 	default="camera_info" />
+
+  <node pkg="image_proc" type="image_proc" name="image_proc" respawn="true" output="screen">
+  	<remap from="image_raw" to="$(arg image_topic)"/>
+  	<remap from="camera_info" to="$(arg camera_info_topic)"/>
+  </node>
+
+</launch>
